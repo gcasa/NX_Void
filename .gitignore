@@ -1,0 +1,5 @@
+*.o
+NX_Void
+NX_Void.app/
+obj/
+*.o
