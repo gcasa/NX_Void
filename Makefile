@@ -21,9 +21,11 @@ endif
 all: $(TARGET)
 
 ifeq ($(UNAME_S),Darwin)
-$(TARGET): $(OBJ) Info.plist
+$(TARGET): $(OBJ) Info.plist Resources/NX_Void.icns
 	mkdir -p $(APP_NAME).app/Contents/MacOS
+	mkdir -p $(APP_NAME).app/Contents/Resources
 	cp Info.plist $(APP_NAME).app/Contents/Info.plist
+	cp Resources/NX_Void.icns $(APP_NAME).app/Contents/Resources/NX_Void.icns
 	$(CC) $(OBJ) -o $@ $(LDFLAGS)
 
 run: $(TARGET)
