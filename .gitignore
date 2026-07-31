@@ -4,3 +4,5 @@ NX_Void.app/
 obj/
 *.o
 .DS_Store
+*.o
+obj

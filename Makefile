@@ -1,6 +1,7 @@
 APP_NAME = NX_Void
 SRC = main.m NXVGameView.m NXVMath.m
-OBJ = $(SRC:.m=.o)
+OBJ_DIR = obj
+OBJ = $(addprefix $(OBJ_DIR)/,$(SRC:.m=.o))
 
 UNAME_S := $(shell uname -s)
 
@@ -38,8 +39,11 @@ run: $(TARGET)
 	./$(TARGET)
 endif
 
-%.o: %.m
+$(OBJ_DIR):
+	mkdir -p $@
+
+$(OBJ_DIR)/%.o: %.m | $(OBJ_DIR)
 	$(CC) $(OBJCFLAGS) -c $< -o $@
 
 clean:
-	rm -rf $(OBJ) $(APP_NAME) $(APP_NAME).app
+	rm -rf $(OBJ_DIR) $(APP_NAME) $(APP_NAME).app

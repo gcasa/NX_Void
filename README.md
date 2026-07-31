@@ -6,7 +6,7 @@ The project intentionally stays close to classic Objective-C/AppKit style: no ni
 
 ## Screenshot
 
-The app renders its scene live, so there is no checked-in gameplay screenshot yet. The application icon lives in `Resources/NX_Void.svg` and is packaged as both macOS `.icns` and GNUstep-friendly `.tiff` assets.
+The app renders its scene live, so there is no checked-in gameplay screenshot yet. The application icon master lives in `Resources/NX_Void.png` and is packaged as both macOS `.icns` and GNUstep-friendly `.tiff` assets.
 
 ## Building
 
@@ -82,7 +82,7 @@ The HUD shows:
 |-- NXVGameView.h/.m     game loop, input, drawing, collision logic
 |-- NXVMath.h/.m         small vector/rotation helpers
 |-- Resources/
-|   |-- NX_Void.svg      editable icon source
+|   |-- NX_Void.png      high-resolution icon master
 |   |-- NX_Void.icns     macOS app icon
 |   `-- NX_Void.tiff     GNUstep icon resource
 `-- main.m              AppKit application setup
